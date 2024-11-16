@@ -2,7 +2,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
-import { Button } from '../components/ui/button.tsx';
+import { Button } from '@/components/ui/button';
 // import {
 //   Form,
 //   FormControl,
@@ -12,24 +12,28 @@ import { Button } from '../components/ui/button.tsx';
 //   FormLabel,
 //   FormMessage,
 // } from '../components/ui/form.tsx';
-// import { Input } from '@/components/ui/input';
+import { Input } from '@/components/ui/input';
 
-const formSchema = z.object({
-  username: z.string().min(2, {
-    message: 'Username must be at least 2 characters',
-  }),
-});
+// const formSchema = z.object({
+//   username: z.string().min(2, {
+//     message: 'Username must be at least 2 characters',
+//   }),
+// });
 
 const Lobby = () => {
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      username: 'What is your username?',
-    },
-  });
+  // const form = useForm<z.infer<typeof formSchema>>({
+  //   resolver: zodResolver(formSchema),
+  //   defaultValues: {
+  //     username: 'What is your username?',
+  //   },
+  // });
   return (
-    <Form>
-      {/* <FormField
+    <>
+      <Button />
+      <Input />
+    </>
+    // <Form>
+    /* <FormField
         control={'...'}
         name='...'
         render={() => (
@@ -40,8 +44,8 @@ const Lobby = () => {
             <FormMessage />
           </FormItem>
         )}
-      /> */}
-    </Form>
+      /> */
+    // </Form>
   );
 };
 
