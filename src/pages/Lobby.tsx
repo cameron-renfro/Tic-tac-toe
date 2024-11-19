@@ -12,7 +12,7 @@ import { Button } from '@/components/ui/button';
 //   FormLabel,
 //   FormMessage,
 // } from '../components/ui/form.tsx';
-import { Input } from '@/components/ui/input';
+import { Input } from '../components/ui/input.tsx';
 
 // const formSchema = z.object({
 //   username: z.string().min(2, {
