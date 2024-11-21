@@ -1,11 +1,22 @@
 import './App.css';
-import Lobby from './pages/Lobby';
+import Square from './pages/Square';
+
+function Board() {
+  const board = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  return (
+    <div className='board'>
+      {board.map((item: number) => (
+        <Square key={item} square={item} />
+      ))}
+    </div>
+  );
+}
 
 function App() {
   return (
     <>
       <div>
-        <Lobby />
+        <Board />
       </div>
     </>
   );
